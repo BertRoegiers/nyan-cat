@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nyan Cat</title>
+	<meta charset="utf-8">
+</head>
+
+<style type="text/css">
+	
+/*#catimg {
+	position: fixed;
+	animation-name: rain;
+	animation-duration: 3s;
+}
+
+@keyframes rain {
+	from {top:0;left:0;}
+	to {top:100%;left:100%;}
+}
+*/
+
+
+.nyan-cat {
+	position:fixed;
+	transition:1s;
+}
+
+.nyan-cat-start {
+	left:0;
+	top:0;
+}
+
+.nyan-cat-end {
+	left:100vw;
+	top:100vh;
+}
+
+</style>
+<body>
+
+
+	<div class="button">
+		<div>
+			<button id="button" type="button">Pussy</button>
+		</div>
+	</div>
+
+		
+		<script>
+
+// var calcrnd = function getRndInteger(min, max) {
+//   return Math.floor(Math.random() * (max - min) ) + min;
+// }
+
+
+button.addEventListener('click', function() {
+	lotsoffpussy();
+	
+});
+
+
+
+function lotsoffpussy() {
+	var nyan = document.createElement("img");
+	nyan.src='pussy.png';
+	nyan.style.position='fixed';
+	nyan.style.left ='-'+ Math.floor(Math.random()*(100-1))+1+'%';
+	nyan.style.top='-25%';
+	nyan.style.transition = Math.floor(Math.random()*(7-3))+3 +'s';
+	
+	// nyan.classList.add('nyan-cat');
+	// nyan.classList.add('nyan-cat-start');
+	
+	document.body.style.backgroundImage = "url('naynbackground.png')";
+
+	//var img = "";
+	document.body.appendChild(nyan);
+	setTimeout(function(){
+		nyan.classList.add('nyan-cat-end');
+		nyan.style.left='150%';
+		nyan.style.top='100%';
+		
+
+		setTimeout(function() {document.body.style.backgroundImage='none';},1000);
+	},10000);
+}
+	
+	
+	
+		setTimeout(lotsoffpussy,10000); 
+			 {var x = setInterval(lotsoffpussy,1);
+		clearInterval(x);
+	}
+
+
+
+		</script>
+
+
+</body>
+</html>
+
+
+
+

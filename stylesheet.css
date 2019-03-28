@@ -1,0 +1,14 @@
+.container {
+	text-align: center;
+	margin:auto;
+}
+
+button {
+	position: absolute;
+	top:50%;
+}
+
+img {
+	height: 50%;
+	width: 50%;
+}
