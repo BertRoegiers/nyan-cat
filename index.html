@@ -68,6 +68,9 @@
 		nyan.style.left ='-'+ Math.floor(Math.random()*(11-1))+1+'%';
 		nyan.style.top='-25%';
 		nyan.style.transition = Math.floor(Math.random()*(7-3))+3 +'s';
+		nyan.style.transform = "rotate("+Math.floor(Math.random()*(180-90)+90)		+'deg)';
+
+
 
 
 		document.body.style.backgroundImage = "url('naynbackground.png')";
@@ -78,10 +81,11 @@
 			nyan.classList.add('nyan-cat-end');
 			nyan.style.left='150%';
 			nyan.style.top='100%';
+			nyan.style.transform = "rotate("+Math.random()*((360-0)+0)+'deg)';
 
 			setTimeout(function() {
 				document.body.style.backgroundImage='none';
-			},10000);
+			},12000);
 		},100);
 	}
 
